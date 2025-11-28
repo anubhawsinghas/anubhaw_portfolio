@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Design System for Digital Marketing Portfolio
+   All colors are HSL format for consistency with shadcn/ui
+*/
+
+@layer base {
+  :root {
+    /* Base Colors - Clean, Professional Palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary Brand - Modern Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 70%;
+    --primary-dark: 217 91% 45%;
+
+    /* Secondary - Sophisticated Gray-Blue */
+    --secondary: 214 32% 95%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted - Subtle Backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Vibrant Cyan for CTAs */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 199 89% 60%;
+
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Professional Gradient Palette */
+    --gradient-primary-start: 217 91% 60%;
+    --gradient-primary-end: 199 89% 48%;
+    
+    --gradient-hero-start: 217 91% 60%;
+    --gradient-hero-end: 199 89% 48%;
+    
+    --gradient-card-start: 0 0% 100%;
+    --gradient-card-end: 210 40% 98%;
+
+    /* Shadow Colors with Alpha */
+    --shadow-primary: 217 91% 60%;
+    --shadow-accent: 199 89% 48%;
+    
+    /* Metric Highlights */
+    --metric-highlight: 217 91% 60%;
+    --metric-positive: 142 76% 36%;
+    --metric-growth: 199 89% 48%;
+  }
+
+  .dark {
+    /* Dark Mode - Professional Dark Palette */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary in Dark Mode */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 70%;
+    --primary-dark: 217 91% 45%;
+
+    /* Secondary in Dark Mode */
+    --secondary: 217 33% 23%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted in Dark Mode */
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 19% 60%;
+
+    /* Accent in Dark Mode */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 199 89% 60%;
+
+    /* Semantic Colors for Dark Mode */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* UI Elements in Dark Mode */
+    --border: 217 33% 23%;
+    --input: 217 33% 23%;
+    --ring: 217 91% 60%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary-start: 217 91% 60%;
+    --gradient-primary-end: 199 89% 48%;
+    
+    --gradient-hero-start: 217 91% 60%;
+    --gradient-hero-end: 199 89% 48%;
+    
+    --gradient-card-start: 217 33% 17%;
+    --gradient-card-end: 215 28% 17%;
+
+    /* Shadow Colors for Dark Mode */
+    --shadow-primary: 217 91% 60%;
+    --shadow-accent: 199 89% 48%;
+    
+    /* Metric Highlights for Dark Mode */
+    --metric-highlight: 217 91% 60%;
+    --metric-positive: 142 76% 36%;
+    --metric-growth: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    font-feature-settings: 'ss01' 1, 'ss02' 1;
+  }
+}
+
+/* Professional Typography Scale */
+@layer utilities {
+  .text-display {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+
+  .text-heading-1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .text-heading-2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  .text-heading-3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  .text-body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed;
+  }
+}
+
+/* Professional Component Utilities */
+@layer components {
+  .card-elevated {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .card-interactive {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .glassmorphism {
+    @apply backdrop-blur-xl bg-card/70 border border-border/50;
+  }
+}
+
+/* Print Styles - Optimized for PDF Export */
+@media print {
+  /* Hide non-essential elements */
+  nav,
+  .no-print,
+  button,
+  footer,
+  .scroll-to-top {
+    display: none !important;
+  }
+
+  /* Optimize layout for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Prevent page breaks inside elements */
+  section,
+  .card,
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 1.5cm;
+    size: A4 portrait;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 24pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 20pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 16pt;
+    page-break-after: avoid;
+  }
+
+  /* Optimize colors for print */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Keep subtle borders for structure */
+  .border,
+  [class*="border"] {
+    border-color: #ddd !important;
+  }
+
+  /* Show URLs for important links */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Remove animations and transitions */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
