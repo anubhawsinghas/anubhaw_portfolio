@@ -99,7 +99,7 @@ const TimelineItem = ({ event, index, inView }: { event: any; index: number; inV
 
         {/* Content Card */}
         <motion.div
-          className="ml-20 md:ml-0 bg-card backdrop-blur-sm border border-border/50 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+          className="ml-20 mt-8 md:ml-0 bg-card backdrop-blur-sm border border-border/50 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
           whileHover={{ y: -4, scale: 1.02 }}
         >
           <div className="text-sm font-semibold text-primary mb-2">{event.year}</div>

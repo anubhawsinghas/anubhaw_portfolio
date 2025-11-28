@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
+    <section id="home" className="relative min-h-screen mt-5 flex items-center justify-center pt-20 px-4 overflow-hidden">
       {/* Modern gradient background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
@@ -213,7 +213,7 @@ const Hero = () => {
                 asChild
                 className="group"
               >
-                <a href="/Anubhaw_Kumar_Singh_Resume.pdf" download="Anubhaw_Kumar_Singh_Resume.pdf">
+                <a href="/AnubhawKumarSinghSocialMedia.pdf" download="Anubhaw_Kumar_Singh_Resume.pdf">
                   <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Download Resume
                 </a>
@@ -237,7 +237,7 @@ const Hero = () => {
           </motion.div>
           
           {/* Print button */}
-          <motion.div 
+          {/* <motion.div 
             className="pt-4 no-print"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -252,7 +252,7 @@ const Hero = () => {
               <Printer className="mr-2 h-4 w-4" />
               Print/Save as PDF
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           {/* Tagline */}
           <motion.div 
